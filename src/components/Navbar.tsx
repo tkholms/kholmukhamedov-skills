@@ -27,10 +27,10 @@ export function Navbar() {
             K
           </span>
           <span className="hidden sm:inline">
-            <T>Kompas Edu</T>
+            <T>Kholmukhamedov Skills</T>
           </span>
           <span className="sm:hidden">
-            <T>Kompas</T>
+            <T>Skills</T>
           </span>
         </Link>
 

@@ -13,7 +13,7 @@ export function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-mid text-sm font-bold text-white">
                 K
               </span>
-              <span className="text-lg font-bold text-white">Kompas Edu</span>
+              <span className="text-lg font-bold text-white">Kholmukhamedov Skills</span>
             </div>
             <p className="text-sm leading-relaxed text-blue-300/70">
               <T>
@@ -64,7 +64,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-blue-300/50">
-          <p>© 2024–2025 Kompas Edu</p>
+          <p>© 2024–2025 Kholmukhamedov Skills</p>
         </div>
       </div>
     </footer>
