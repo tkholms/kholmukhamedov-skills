@@ -17,23 +17,23 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
+    <nav className="sticky top-0 z-50 border-b border-blue-900/20 bg-navy/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        {/* Logo / site name */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold text-zinc-900 dark:text-zinc-50"
+          className="flex items-center gap-2.5 text-lg font-bold text-white"
         >
-          <span className="text-xl">📋</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-mid text-sm text-white">
+            K
+          </span>
           <span className="hidden sm:inline">
-            <T>Amaliy topshiriqlar banki</T>
+            <T>Kompas Edu</T>
           </span>
           <span className="sm:hidden">
-            <T>Topshiriqlar</T>
+            <T>Kompas</T>
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden items-center gap-1 md:flex">
           {NAV_ITEMS.map((item) => {
             const isActive =
@@ -46,25 +46,24 @@ export function Navbar() {
                 href={item.href}
                 className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                   isActive
-                    ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
-                    : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800/50 dark:hover:text-zinc-50"
+                    ? "bg-white/15 text-white"
+                    : "text-blue-200 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 <T>{item.label}</T>
               </Link>
             );
           })}
-          <div className="ml-2">
+          <div className="ml-3">
             <ScriptToggle />
           </div>
         </div>
 
-        {/* Mobile: toggle + hamburger */}
         <div className="flex items-center gap-2 md:hidden">
           <ScriptToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="rounded-lg p-2 text-zinc-600 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+            className="rounded-lg p-2 text-blue-200 hover:bg-white/10 hover:text-white"
             aria-label="Menyuni ochish"
           >
             <svg
@@ -92,9 +91,8 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-zinc-200 px-4 py-2 md:hidden dark:border-zinc-800">
+        <div className="border-t border-white/10 px-4 py-2 md:hidden">
           {NAV_ITEMS.map((item) => {
             const isActive =
               item.href === "/"
@@ -107,8 +105,8 @@ export function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                   isActive
-                    ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
-                    : "text-zinc-600 hover:bg-zinc-50 dark:text-zinc-400 dark:hover:bg-zinc-800/50"
+                    ? "bg-white/15 text-white"
+                    : "text-blue-200 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 <T>{item.label}</T>

@@ -8,7 +8,7 @@ export function ScriptToggle() {
   return (
     <button
       onClick={toggleScript}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-sm font-medium text-zinc-700 shadow-sm transition-colors hover:bg-zinc-50 active:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-white/20 active:bg-white/25"
       aria-label={
         script === "latin"
           ? "Kirill yozuviga oʻtish"
@@ -18,7 +18,7 @@ export function ScriptToggle() {
       <span className="text-base leading-none">
         {script === "latin" ? "Aa" : "Аа"}
       </span>
-      <span className="text-xs text-zinc-500 dark:text-zinc-400">
+      <span className="text-xs text-blue-200">
         {script === "latin" ? "→ Кир" : "→ Lot"}
       </span>
     </button>

@@ -5,14 +5,11 @@ import type { DreyfusLevel } from "@/lib/types";
 import { DREYFUS_LABELS } from "@/lib/types";
 
 const LEVEL_COLORS: Record<DreyfusLevel, string> = {
-  novice: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
-  "advanced-beginner":
-    "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
-  competent:
-    "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-  proficient:
-    "bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300",
-  expert: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300",
+  novice: "bg-sky-100 text-sky-800 border-sky-200",
+  "advanced-beginner": "bg-blue-100 text-blue-800 border-blue-200",
+  competent: "bg-indigo-100 text-indigo-800 border-indigo-200",
+  proficient: "bg-violet-100 text-violet-800 border-violet-200",
+  expert: "bg-slate-800 text-white border-slate-700",
 };
 
 const LEVEL_ORDER: Record<DreyfusLevel, number> = {
@@ -36,13 +33,13 @@ export function DreyfusBadge({
   const order = LEVEL_ORDER[level];
 
   const sizeClasses =
-    size === "sm" ? "px-2 py-0.5 text-xs" : "px-3 py-1 text-sm";
+    size === "sm" ? "px-2.5 py-0.5 text-xs" : "px-4 py-1.5 text-sm";
 
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full font-medium ${color} ${sizeClasses}`}
+      className={`inline-flex items-center gap-1.5 rounded-full border font-medium ${color} ${sizeClasses}`}
     >
-      <span className="text-[0.65em] opacity-60">{order}</span>
+      <span className="text-[0.65em] opacity-50">{order}</span>
       {label}
     </span>
   );
